@@ -28,7 +28,7 @@ load test_helper
   run cat "$THE_TMP/$WORKFLOW_FAILED_TXT"
   [ "$status" -eq 0 ] 
   [ "${lines[0]}" == "simple.error.message=Unable to create CHM job" ] 
-  [[ "${lines[1]}" == "detailed.error.message=Non zero exit code received from /home/churas/panfish/cws_vizwall/cws/bin/panfishCHM/createCHMJob.sh"* ]]
+  [[ "${lines[1]}" == "detailed.error.message=Non zero exit code received from /sharktopus/megashark/cws/bin/panfishCHM/createCHMJob.sh"* ]]
 
   # Check output of README.txt file
   [ -s "$THE_TMP/$README_TXT" ]
@@ -38,7 +38,7 @@ load test_helper
   [ "${lines[1]}" == "Job Name:  jobname" ]
   [ "${lines[2]}" == "User:  user" ] 
   [ "${lines[3]}" == "Workflow Job Id:  jobid" ]
-  [ "${lines[6]}" == "Create CHM Job Script:  /home/churas/panfish/cws_vizwall/cws/bin/panfishCHM/createCHMJob.sh" ]
+  [ "${lines[6]}" == "Create CHM Job Script:  /sharktopus/megashark/cws/bin/panfishCHM/createCHMJob.sh" ]
   [ "${lines[7]}" == "Trained Model:  " ]
   [ "${lines[8]}" == "Input Images:  " ]
   [ "${lines[9]}" == "CHM options:  -T 122 -b 500x500 -o 20x20 -h" ] 
